@@ -1,0 +1,12 @@
+{
+  "name": "testing_project",
+  "version": "1.0.0",
+  "description": "just test ",
+  "license": "ISC",
+  "author": "Satyam Pal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
