@@ -4,10 +4,7 @@ const users = require("./MOCK_DATA.json");
 const app = express(); // handler function
 const fs = require('fs');
 
-
-
-
-
+// this module help to the read the form data that is comming through the url-encoded 
 app.use(express.urlencoded({extended: false}));
 
 
@@ -50,14 +47,19 @@ app.patch('/api/user:id', (req,res)=>{
     const userUpdateId = Number(req.params.id);
     const body = req.body;
 
+    // getting the index of the lead
     const userIndex = users.find((user)=>user.id === userUpdateId);
 
+    // returning the error message if there is not the user found log the message to the user
     if(userIndex === -1) {
         return req.status(404).json({error:'User Not Found'});
     }
 
+    // updating the user information using js object, using this object the 1st value of the user will be replaced by the 2nd value
     users[userIndex] = {...users[userIndex], ...body};
 
+
+    // this fs moodule is helping to push the updated user infomation
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (error) => {
         if (error) {
             return res.status(500).json({ status: "error", message: "Failed to write file" });
