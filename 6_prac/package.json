@@ -1,0 +1,23 @@
+{
+  "name": "apr_node",
+  "version": "1.0.0",
+  "description": "This is only for demo server creation ",
+  "homepage": "https://github.com/satyampal03/projects_apr#readme",
+  "bugs": {
+    "url": "https://github.com/satyampal03/projects_apr/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyampal03/projects_apr.git"
+  },
+  "license": "ISC",
+  "author": "Satyam \tPal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
