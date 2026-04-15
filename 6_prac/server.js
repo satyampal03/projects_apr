@@ -59,6 +59,8 @@ app.patch('/api/user:id', (req,res)=>{
     users[userIndex] = {...users[userIndex], ...body};
 
 
+    
+
     // this fs moodule is helping to push the updated user infomation
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (error) => {
         if (error) {
@@ -75,7 +77,7 @@ app.delete('/api/user', (req,res)=>{
 
 
 // Server is Running PORT
-const PORT = 8000;
+const PORT = 8000;  
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
