@@ -1,19 +1,10 @@
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
 const express = require('express');
-
-
 const app = express();
 
-app.get('/', (req,res)=>{
-    return res.send('this response from the serer on home page')
-});
+app.get('/api/users'    , (req, res)=>{
+      console.log('users Fetched Successfully');      
+})
 
-app.get('/about', (req,res)=>{
-    return res.send('this response from the serer on about page')
-});
-
-const server = http.createServer(app);
-
-server.listen(800);
+app.listen(PORT, ()=>{
+      console.log('port is rinning on port', PORT)
+})

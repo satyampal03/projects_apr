@@ -17,6 +17,8 @@ app.get("/users", (req, res) => {
   res.send(html);
 });
 
+// when user will come in this route then the user will able to this senstive information 
+
 app.get("/api/users", (req, res) => {
   return res.json(users);
 });
@@ -59,7 +61,7 @@ app.patch('/api/user:id', (req,res)=>{
     users[userIndex] = {...users[userIndex], ...body};
 
 
-    
+
 
     // this fs moodule is helping to push the updated user infomation
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (error) => {
