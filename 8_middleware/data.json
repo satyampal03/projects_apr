@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "first_name": "Bobbie",
+        "last_name": "Stirman",
+        "email": "bstirman0@prweb.com",
+        "gender": "Male",
+        "job_title": "Pharmacist"
+    },
+    {
+        "id": 2,
+        "first_name": "Jillene",
+        "last_name": "Mundwell",
+        "email": "jmundwell1@bbc.co.uk",
+        "gender": "Female",
+        "job_title": "Clinical Specialist"
+    },
+    {
+        "id": 3,
+        "first_name": "Julieta",
+        "last_name": "Matijasevic",
+        "email": "jmatijasevic2@pagesperso-orange.fr",
+        "gender": "Female",
+        "job_title": "Health Coach II"
+    }
+]
