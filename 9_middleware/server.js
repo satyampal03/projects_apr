@@ -49,10 +49,15 @@ app.get("/api/users", (req, res) => {
 // sending the data to the server using the post method
 app.post("/user", (req, res) => {
   const body = req.body;
+  if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title){
+    return res.status(400).json({
+      message:'All Fields are Required'
+    });
+  }
   users.push({ ...body, id: users.length + 1 });
 
   fs.writeFile("./data.json", JSON.stringify(users), (err, data) => {
-    res.json({ status: "user created Sucess", id: users.length });
+    res.status(202).json({ status: "user created Sucess", id: users.length });
   });
   // console.log(body);?
 });
