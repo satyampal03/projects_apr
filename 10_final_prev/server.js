@@ -10,7 +10,9 @@ const {logReqRes,
 // mongoose for connection backend to frontend
 const {connectMongoDB} = require('./connection.js');
  
-connectMongoDB('mongodb://127.0.0.1:27017/inch')
+connectMongoDB('mongodb://127.0.0.1:27017/inch').then(()=>{
+  console.log('Mongo DB Connected Successfuly');
+})
 
 
   // middleware to read the urlencoded data 
